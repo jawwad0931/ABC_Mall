@@ -123,12 +123,23 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                                 <ul class="treeview-menu">
                                     <li>@Html.ActionLink("Add Shopping", "Create", "ShoppingCenters")</li>
                                     <li>@Html.ActionLink("View Shopping", "Index", "ShoppingCenters")</li>
-                                    <li> @Html.ActionLink("Add Food Court", "Create", "FoodCourts")</li>
-                                    <li> @Html.ActionLink("View Food Court", "Index", "FoodCourts")</li>
-                                    <li> @Html.ActionLink("Add Gallary", "Create", "Galleries")</li>
-                                    <li> @Html.ActionLink("View Gallary", "Index", "Galleries")</li>
                                 </ul>
                             </li>
+
+
+
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-laptop"></i>
+                                    <span>Food Courts</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li> @Html.ActionLink("Add Food Court", "Create", "FoodCourts")</li>
+                                    <li> @Html.ActionLink("View Food Court", "Index", "FoodCourts")</li>
+                                </ul>
+                            </li>
+
 
                             <li class="treeview">
                             <li class="treeview">
@@ -147,26 +158,41 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
                             </li>
 
 
-                            <li class="treeview">
+
                             <li class="treeview">
                                 <a href="#">
                                     <i class="fa fa-laptop"></i>
-                                    <span>User Accounts</span>
+                                    <span>Gallery Items</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li> @Html.ActionLink("Add Gallary", "Create", "Galleries")</li>
+                                    <li> @Html.ActionLink("View Gallary", "Index", "Galleries")</li>
+                                </ul>
+                            </li>
+
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-laptop"></i>
+                                    <span>User Feedbacks</span>
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </a>
                                 <ul class="treeview-menu">
                                     <li> @Html.ActionLink("View Feedback", "Index", "Feedbacks")</li>
-                                    <li> @Html.ActionLink("View Subscription", "Index", "Subscribes")</li>
                                 </ul>
                             </li>
 
 
-
-
-
-
-
-
+                            <li class="treeview">
+                                <a href="#">
+                                    <i class="fa fa-laptop"></i>
+                                    <span>User Subscriptions</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </a>
+                                <ul class="treeview-menu">
+                                    <li> @Html.ActionLink("View Subscription", "Index", "Subscribes")</li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                     <!-- /.navbar-collapse -->

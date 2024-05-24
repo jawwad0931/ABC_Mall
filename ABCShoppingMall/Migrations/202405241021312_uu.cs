@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class kj : DbMigration
+    public partial class uu : DbMigration
     {
         public override void Up()
         {
@@ -87,6 +87,16 @@
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
+                "dbo.Subscribes",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Email = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
                 "dbo.Tickets",
                 c => new
                     {
@@ -108,6 +118,7 @@
             DropIndex("dbo.Tickets", new[] { "MovieId" });
             DropIndex("dbo.Movies", new[] { "MultiplexId" });
             DropTable("dbo.Tickets");
+            DropTable("dbo.Subscribes");
             DropTable("dbo.ShoppingCenters");
             DropTable("dbo.Multiplexes");
             DropTable("dbo.Movies");

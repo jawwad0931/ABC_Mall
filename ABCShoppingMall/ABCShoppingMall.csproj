@@ -151,13 +151,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202405222151161_kj.cs" />
-    <Compile Include="Migrations\202405222151161_kj.Designer.cs">
-      <DependentUpon>202405222151161_kj.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202405232324402_ee.cs" />
-    <Compile Include="Migrations\202405232324402_ee.Designer.cs">
-      <DependentUpon>202405232324402_ee.cs</DependentUpon>
+    <Compile Include="Migrations\202405241021312_uu.cs" />
+    <Compile Include="Migrations\202405241021312_uu.designer.cs">
+      <DependentUpon>202405241021312_uu.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdminLogin.cs" />
@@ -461,6 +457,10 @@
     <Content Include="Views\UserSubscription\Create.cshtml" />
     <Content Include="Views\Shared\_UserTicket.cshtml" />
     <Content Include="Views\UserTicket\Create.cshtml" />
+    <Content Include="Views\UserTicket\Delete.cshtml" />
+    <Content Include="Views\UserTicket\Details.cshtml" />
+    <Content Include="Views\UserTicket\Edit.cshtml" />
+    <Content Include="Views\UserTicket\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -496,11 +496,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202405222151161_kj.resx">
-      <DependentUpon>202405222151161_kj.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202405232324402_ee.resx">
-      <DependentUpon>202405232324402_ee.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405241021312_uu.resx">
+      <DependentUpon>202405241021312_uu.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
