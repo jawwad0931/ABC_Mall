@@ -1,0 +1,54 @@
+﻿@model ABCShoppingMall.Models.Subscribe
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="container d-flex align-items-center justify-content-start mt-5">
+        <div class="form-horizontal w-50">
+            <div class="section-heading">
+                <h2>By Subscribing You Can Get 30% Off</h2>
+                <span>Subscribe to our newsletter and enjoy 30% off your next purchase!</span>
+            </div>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group row">
+                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col-md-12 d-flex align-content-center justify-content-end">
+                    <li>
+                        <a href="@Url.Action("Create", "UserSubscribe")">
+                            <i class="fa fa-paper-plane text-dark bg-light"></i>
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

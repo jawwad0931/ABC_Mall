@@ -11,112 +11,107 @@ using ABCShoppingMall.Models;
 
 namespace ABCShoppingMall.Controllers
 {
-    public class UserTicketController : Controller
+    public class UserSubscribeController : Controller
     {
         private ABCShoppingMallContext db = new ABCShoppingMallContext();
 
-        // GET: UserTicket
+        // GET: UserSubscribe
         public ActionResult Index()
         {
-            var tickets = db.Tickets.Include(t => t.Movie);
-            return View(tickets.ToList());
+            return View(db.Subscribes.ToList());
         }
 
-        // GET: UserTicket/Details/5
+        // GET: UserSubscribe/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ticket ticket = db.Tickets.Find(id);
-            if (ticket == null)
+            Subscribe subscribe = db.Subscribes.Find(id);
+            if (subscribe == null)
             {
                 return HttpNotFound();
             }
-            return View(ticket);
+            return View(subscribe);
         }
 
-        // GET: UserTicket/Create
+        // GET: UserSubscribe/Create
         public ActionResult Create()
         {
-            ViewBag.MovieId = new SelectList(db.Movies, "Id", "Name");
             return View();
         }
 
-        // POST: UserTicket/Create
+        // POST: UserSubscribe/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,MovieId,CardDetails,IsBooked")] Ticket ticket)
+        public ActionResult Create([Bind(Include = "Id,Name,Email")] Subscribe subscribe)
         {
             if (ModelState.IsValid)
             {
-                db.Tickets.Add(ticket);
+                db.Subscribes.Add(subscribe);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.MovieId = new SelectList(db.Movies, "Id", "Name", ticket.MovieId);
-            return View(ticket);
+            return View(subscribe);
         }
 
-        // GET: UserTicket/Edit/5
+        // GET: UserSubscribe/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ticket ticket = db.Tickets.Find(id);
-            if (ticket == null)
+            Subscribe subscribe = db.Subscribes.Find(id);
+            if (subscribe == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.MovieId = new SelectList(db.Movies, "Id", "Name", ticket.MovieId);
-            return View(ticket);
+            return View(subscribe);
         }
 
-        // POST: UserTicket/Edit/5
+        // POST: UserSubscribe/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,MovieId,CardDetails,IsBooked")] Ticket ticket)
+        public ActionResult Edit([Bind(Include = "Id,Name,Email")] Subscribe subscribe)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(ticket).State = EntityState.Modified;
+                db.Entry(subscribe).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.MovieId = new SelectList(db.Movies, "Id", "Name", ticket.MovieId);
-            return View(ticket);
+            return View(subscribe);
         }
 
-        // GET: UserTicket/Delete/5
+        // GET: UserSubscribe/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Ticket ticket = db.Tickets.Find(id);
-            if (ticket == null)
+            Subscribe subscribe = db.Subscribes.Find(id);
+            if (subscribe == null)
             {
                 return HttpNotFound();
             }
-            return View(ticket);
+            return View(subscribe);
         }
 
-        // POST: UserTicket/Delete/5
+        // POST: UserSubscribe/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Ticket ticket = db.Tickets.Find(id);
-            db.Tickets.Remove(ticket);
+            Subscribe subscribe = db.Subscribes.Find(id);
+            db.Subscribes.Remove(subscribe);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

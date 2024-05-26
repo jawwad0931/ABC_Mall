@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="~/Hexashop/assets/css/owl-carousel.css">
 
     <link rel="stylesheet" href="~/Hexashop/assets/css/lightbox.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!--
 
     TemplateMo 571 Hexashop
@@ -45,24 +47,25 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="main-nav">
+                    <nav class="main-nav" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="~/Hexashop/assets/images/logo.png">
+                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="120px">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section">  @Html.ActionLink("Home", "Index", "User")</li>
-                            <li class="scroll-to-section">  @Html.ActionLink("Shop", "Index", "ShoopingProduct")</li>
-                            <li class="scroll-to-section">  @Html.ActionLink("Food Court", "Index", "FoodA")</li>
+                            <li class="scroll-to-section"><a href="#men">Shop</a></li>
+                            <li class="scroll-to-section"><a href="#women">Food Courts</a></li>
                             <li class="scroll-to-section">  @Html.ActionLink("Gallery", "Index", "GalleriesUser")</li>
                             <li class="submenu">
                                 <a href="javascript:;">Cinema</a>
                                 <ul>
 
+                                    <li class="scroll-to-section"><a href="#kids">Movies</a></li>
                                     <li>@Html.ActionLink("Movies", "Index", "UserMovies")</li>
-                                    <li>@Html.ActionLink("Tickets", "Index", "UserTicket")</li>
+                                    <li>@Html.ActionLink("Book Tickets", "Create", "UserTicket")</li>
 
                                 </ul>
                             </li>
@@ -84,7 +87,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="left-content">
+                    <div class="left-content" data-aos="slide-right" data-aos-duration="1000" data-aos-delay="50">
                         <div class="thumb">
                             <div class="inner-content">
                                 <h4>
@@ -106,7 +109,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="right-content">
+                    <div class="right-content" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="right-first-image">
@@ -129,7 +132,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="right-first-image">
+                                <div class="right-first-image" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                                     <div class="thumb">
                                         <div class="inner-content">
                                             <h4>Men</h4>
@@ -149,7 +152,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="right-first-image">
+                                <div class="right-first-image" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                                     <div class="thumb">
                                         <div class="inner-content">
                                             <h4>Kids</h4>
@@ -169,7 +172,7 @@
                                 </div>
                             </div>
                             <div class="col-lg-6">
-                                <div class="right-first-image">
+                                <div class="right-first-image" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                                     <div class="thumb">
                                         <div class="inner-content">
                                             <h4>Accessories</h4>
@@ -201,8 +204,8 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>Men's Latest</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <h2>Shopping Centers</h2>
+                        <span>Trendy boutiques, gourmet eateries, and exciting entertainment venues.</span>
                     </div>
                 </div>
             </div>
@@ -325,8 +328,8 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>Women's Latest</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <h2>Food Courts</h2>
+                        <span> Delicious options for every taste and preference.</span>
                     </div>
                 </div>
             </div>
@@ -370,7 +373,7 @@
                                                     <i class="fa fa-eye"></i>
                                                 </a>
                                             </li>
-</div>
+                                    </div>
                                     <img src="~/Hexashop/assets/images/women-02.jpg" alt="">
                                 </div>
                                 <div class="down-content">
@@ -448,8 +451,8 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-heading">
-                        <h2>Kid's Latest</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <h2>Latest Movies</h2>
+                        <span>Immersive audio-visual journeys into diverse genres and narratives."</span>
                     </div>
                 </div>
             </div>
@@ -572,15 +575,15 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-content">
-                        <h2>Explore Our Products</h2>
-                        <span>You are allowed to use this HexaShop HTML CSS template. You can feel free to modify or edit this layout. You can convert this template as any kind of ecommerce CMS theme as you wish.</span>
+                        <h2>Discover Our Shops</h2>
+                        <span>Welcome to our diverse range of shops, offering everything from the latest fashion to unique gifts. Feel free to explore and find what you love.</span>
                         <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>You are not allowed to redistribute this template ZIP file on any other website.</p>
+                            <i class="fa fa-quote-left"></i><p>Your ultimate shopping destination for quality and variety.</p>
                         </div>
-                        <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
-                        <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p>
+                        <p>We have a carefully curated selection of stores to meet all your shopping needs. From high-end brands to local artisans, our shops provide an exceptional shopping experience.</p>
+                        <p>If you enjoy our shopping center, please share your experience with friends and family. Your support helps us continue to bring you the best in retail and entertainment.</p>
                         <div class="main-border-button">
-                            <a href="products.html">Discover More</a>
+                            <p> @Html.ActionLink("Discover More", "Index", "ShoopingProduct") </p>
                         </div>
                     </div>
                 </div>
@@ -623,7 +626,7 @@
                 <div class="col-lg-12">
                     <div class="section-heading">
                         <h2>Social Media</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
+                        <span>Social media: Connect, share, and engage with a global community instantly.</span>
                     </div>
                 </div>
             </div>
@@ -635,7 +638,6 @@
                         <div class="icon">
                             <a href="http://instagram.com">
                                 <h6>Fashion</h6>
-                                <i class="fa fa-instagram"></i>
                             </a>
                         </div>
                         <img src="~/Hexashop/assets/images/instagram-01.jpg" alt="">
@@ -646,7 +648,6 @@
                         <div class="icon">
                             <a href="http://instagram.com">
                                 <h6>New</h6>
-                                <i class="fa fa-instagram"></i>
                             </a>
                         </div>
                         <img src="~/Hexashop/assets/images/instagram-02.jpg" alt="">
@@ -657,7 +658,6 @@
                         <div class="icon">
                             <a href="http://instagram.com">
                                 <h6>Brand</h6>
-                                <i class="fa fa-instagram"></i>
                             </a>
                         </div>
                         <img src="~/Hexashop/assets/images/instagram-03.jpg" alt="">
@@ -668,7 +668,6 @@
                         <div class="icon">
                             <a href="http://instagram.com">
                                 <h6>Makeup</h6>
-                                <i class="fa fa-instagram"></i>
                             </a>
                         </div>
                         <img src="~/Hexashop/assets/images/instagram-04.jpg" alt="">
@@ -679,7 +678,6 @@
                         <div class="icon">
                             <a href="http://instagram.com">
                                 <h6>Leather</h6>
-                                <i class="fa fa-instagram"></i>
                             </a>
                         </div>
                         <img src="~/Hexashop/assets/images/instagram-05.jpg" alt="">
@@ -690,7 +688,6 @@
                         <div class="icon">
                             <a href="http://instagram.com">
                                 <h6>Bag</h6>
-                                <i class="fa fa-instagram"></i>
                             </a>
                         </div>
                         <img src="~/Hexashop/assets/images/instagram-06.jpg" alt="">
@@ -701,44 +698,44 @@
     </section>
     <!-- ***** Social Area Ends ***** -->
     <!-- ***** Subscribe Area Starts ***** -->
-    <div class="subscribe">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="section-heading">
-                        <h2>By Subscribing To Our Newsletter You Can Get 30% Off</h2>
-                        <span>Details to details is what makes Hexashop different from the other themes.</span>
-                    </div>
-                    <form id="subscribe" action="" method="get">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <fieldset>
-                                    <input name="name" type="text" id="name" placeholder="Your Name" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-5">
-                                <fieldset>
-                                    <input name="email" type="text" id="email" placeholder="Your Email Address" required="">
-                                </fieldset>
-                            </div>
-                            <div class="col-lg-2">
-                                <fieldset>
-                                    <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
-                                </fieldset>
-                            </div>
+    @*<div class="subscribe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="section-heading">
+                            <h2>By Subscribing You Can Get 30% Off</h2>
+                            <span>Subscribe to our newsletter and enjoy 30% off your next purchase!</span>
                         </div>
-                    </form>
+                        <form id="subscribe" action="" method="get">
+                            <div class="row">
+                                <div class="col-lg-5">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="Your Name" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-5">
+                                    <fieldset>
+                                        <input name="email" type="text" id="email" placeholder="Your Email Address" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-2">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-dark-button"><i class="fa fa-paper-plane"></i></button>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- ***** Subscribe Area Ends ***** -->
+        </div>*@
 
 
 
     <div>
         @RenderBody()
     </div>
+    <!-- ***** Subscribe Area Ends ***** -->
 
     <footer>
         <div class="container">
@@ -746,38 +743,23 @@
                 <div class="col-lg-3" data-aos="slide-right" data-aos-duration="1000">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="~/Hexashop/assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="80" style="border-radius:50%;color:white;" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
-                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                            <li><a href="#">hexashop@company.com</a></li>
-                            <li><a href="#">010-020-0340</a></li>
+                            <li><a href="#">Aptech Clifton,Karachi,Pakistan</a></li>
+                            <li><a href="#">ABC@gmail.com</a></li>
+                            <li><a href="#">03499234678</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-9 d-flex align-items-center justify-content-end" data-aos="slide-left" data-aos-duration="1000">
                     <div class="text-center">
-                        <h4>Shopping &amp; Categories</h4>
+                        <h3 class="text-light fw-light pb-3">Shopping &amp; Categories</h3>
                         <ul>
-                            <li><a href="#">Men’s Shopping</a></li>
-                            <li><a href="#">Women’s Shopping</a></li>
-                            <li><a href="#">Kid's Shopping</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="under-footer">
-                        <p data-aos="zoom-out" data-aos-duration="1000">
-                            Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.
-
-                            <br data-aos="zoom-out" data-aos-duration="1000">Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-                        </p>
-                        <ul data-aos="zoom-out" data-aos-duration="1000">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li> @Html.ActionLink("Shops", "Index", "ShoopingProduct") </li>
+                            <li> @Html.ActionLink("Food Courts", "Index", "FoodA") </li>
+                            <li> @Html.ActionLink("Booking Tickets", "Index", "UserTicket") </li>
+                            <li> @Html.ActionLink("Cinema Movies", "Index", "UserMovies") </li>
                         </ul>
                     </div>
                 </div>
@@ -825,6 +807,11 @@
         });
 
     </script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    @* Most important script *@
+    @RenderSection("scripts", required: false)
 </body>
 </html>

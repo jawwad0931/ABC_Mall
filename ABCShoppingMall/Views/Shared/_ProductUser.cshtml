@@ -47,10 +47,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="main-nav">
+                    <nav class="main-nav" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="~/Hexashop/assets/images/logo.png">
+                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="120px">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -62,9 +62,9 @@
                             <li class="submenu">
                                 <a href="javascript:;">Cinema</a>
                                 <ul>
-                                    <li> @Html.ActionLink("Multiplex", "Login", "AdminDashboard")</li>
-                                    <li>@Html.ActionLink("Movies", "Login", "AdminDashboard")</li>
-                                    <li>@Html.ActionLink("Tickets", "Login", "AdminDashboard")</li>
+
+                                    <li>@Html.ActionLink("Movies", "Index", "UserMovies")</li>
+                                    <li>@Html.ActionLink("Book Tickets", "Create", "UserTicket")</li>
 
                                 </ul>
                             </li>
@@ -87,8 +87,8 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>Check Our Shops</h2>
-                        <span>Awesome &amp; Creative HTML CSS layout by TemplateMo</span>
+                        <h2>Food Courts</h2>
+                        <span>Savor a world of flavors in our bustling food court.</span>
                     </div>
                 </div>
             </div>
@@ -109,38 +109,23 @@
                 <div class="col-lg-3" data-aos="slide-right" data-aos-duration="1000">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="~/Hexashop/assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                            <img src="~/Hexashop/assets/images/j.png" height="100px" width="100" style="border-radius:50%;" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
-                            <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                            <li><a href="#">hexashop@company.com</a></li>
-                            <li><a href="#">010-020-0340</a></li>
+                            <li><a href="#">Aptech Clifton,Karachi,Pakistan</a></li>
+                            <li><a href="#">ABC@gmail.com</a></li>
+                            <li><a href="#">03499234678</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-9 d-flex align-items-center justify-content-end" data-aos="slide-left" data-aos-duration="1000">
                     <div class="text-center">
-                        <h4>Shopping &amp; Categories</h4>
+                        <h3 class="text-light fw-light pb-3">Shopping &amp; Categories</h3>
                         <ul>
-                            <li><a href="#">Men’s Shopping</a></li>
-                            <li><a href="#">Women’s Shopping</a></li>
-                            <li><a href="#">Kid's Shopping</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-12">
-                    <div class="under-footer">
-                        <p data-aos="zoom-out" data-aos-duration="1000">
-                            Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved.
-
-                            <br data-aos="zoom-out" data-aos-duration="1000">Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a>
-                        </p>
-                        <ul data-aos="zoom-out" data-aos-duration="1000">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-behance"></i></a></li>
+                            <li> @Html.ActionLink("Shops", "Index", "ShoopingProduct") </li>
+                            <li> @Html.ActionLink("Food Courts", "Index", "FoodA") </li>
+                            <li> @Html.ActionLink("Booking Tickets", "Index", "UserTicket") </li>
+                            <li> @Html.ActionLink("Cinema Movies", "Index", "UserMovies") </li>
                         </ul>
                     </div>
                 </div>

@@ -9,12 +9,12 @@ namespace ABCShoppingMall.Controllers
 {
     public class UserController : Controller
     {
-       
 
-       public ABCShoppingMallContext db = new ABCShoppingMallContext();
-        
 
-     
+        public ABCShoppingMallContext db = new ABCShoppingMallContext();
+
+
+
 
         // GET: User
         public ActionResult Index()
@@ -35,11 +35,11 @@ namespace ABCShoppingMall.Controllers
 
             //var image = db.ShoppingCenters.Find(id);
             var image = db.ShoppingCenters.FirstOrDefault(x => x.Id == id);
-            
+
             return File(image.Image, "image/jpeg");
         }
 
-       
+
 
     }
 }

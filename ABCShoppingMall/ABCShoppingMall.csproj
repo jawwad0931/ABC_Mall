@@ -145,15 +145,15 @@
     <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\UserMoviesController.cs" />
-    <Compile Include="Controllers\UserSubscriptionController.cs" />
+    <Compile Include="Controllers\UserSubscribeController.cs" />
     <Compile Include="Controllers\UserTicketController.cs" />
     <Compile Include="Data\ABCShoppingMallContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202405241021312_uu.cs" />
-    <Compile Include="Migrations\202405241021312_uu.designer.cs">
-      <DependentUpon>202405241021312_uu.cs</DependentUpon>
+    <Compile Include="Migrations\202405251907291_oo.cs" />
+    <Compile Include="Migrations\202405251907291_oo.Designer.cs">
+      <DependentUpon>202405251907291_oo.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AdminLogin.cs" />
@@ -390,7 +390,6 @@
     <Content Include="Views\AdminDashboard\Dashboard.cshtml" />
     <Content Include="Views\AdminDashboard\Login.cshtml" />
     <Content Include="Views\Shared\_UserLayout.cshtml" />
-    <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\ShoppingCenters\Create.cshtml" />
     <Content Include="Views\ShoppingCenters\Delete.cshtml" />
     <Content Include="Views\ShoppingCenters\Details.cshtml" />
@@ -454,13 +453,18 @@
     <Content Include="Views\Subscribes\Details.cshtml" />
     <Content Include="Views\Subscribes\Edit.cshtml" />
     <Content Include="Views\Subscribes\Index.cshtml" />
-    <Content Include="Views\UserSubscription\Create.cshtml" />
     <Content Include="Views\Shared\_UserTicket.cshtml" />
     <Content Include="Views\UserTicket\Create.cshtml" />
     <Content Include="Views\UserTicket\Delete.cshtml" />
     <Content Include="Views\UserTicket\Details.cshtml" />
     <Content Include="Views\UserTicket\Edit.cshtml" />
     <Content Include="Views\UserTicket\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\UserSubscribe\Create.cshtml" />
+    <Content Include="Views\UserSubscribe\Delete.cshtml" />
+    <Content Include="Views\UserSubscribe\Details.cshtml" />
+    <Content Include="Views\UserSubscribe\Edit.cshtml" />
+    <Content Include="Views\UserSubscribe\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -496,8 +500,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202405241021312_uu.resx">
-      <DependentUpon>202405241021312_uu.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202405251907291_oo.resx">
+      <DependentUpon>202405251907291_oo.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
