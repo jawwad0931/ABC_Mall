@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_ProductUser.cshtml";
+    Layout = "~/Views/Shared/_UserProductSide.cshtml";
 }
 
 <section class="section" id="products">
@@ -24,11 +24,7 @@
                     <div class="item">
                         <div class="thumb">
                             <div class="hover-content">
-                                <ul>
-                                    <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                    <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                    <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
-                                </ul>
+                             
                             </div>
 
                             <tr>
@@ -41,14 +37,7 @@
                         </div>
                         <div class="down-content">
                             <h4>@item.ShopName</h4>
-                            <span>$120.00</span>
-                            <ul class="stars">
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                                <li><i class="fa fa-star"></i></li>
-                            </ul>
+                            <span @item.Shop_Detail></span>
                         </div>
                     </div>
                 </div>

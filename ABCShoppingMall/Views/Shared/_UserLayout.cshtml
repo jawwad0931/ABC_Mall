@@ -31,6 +31,8 @@
     https://templatemo.com/tm-571-hexashop
 
     -->
+    @* Animation *@
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
 
@@ -47,10 +49,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="main-nav" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
+                    <nav class="main-nav text-dark" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="120px">
+                        <a href="index.html" class="logo" style="color: #404040 !important;">
+                            @*<img src="~/Hexashop/assets/images/j.png" height="80px" width="120px">*@
+                            ABC Mall
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -64,7 +67,6 @@
                                 <ul>
 
                                     <li class="scroll-to-section"><a href="#kids">Movies</a></li>
-                                    <li>@Html.ActionLink("Movies", "Index", "UserMovies")</li>
                                     <li>@Html.ActionLink("Book Tickets", "Create", "UserTicket")</li>
 
                                 </ul>
@@ -87,21 +89,21 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="left-content" data-aos="slide-right" data-aos-duration="1000" data-aos-delay="50">
+                    <div class="left-content" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                         <div class="thumb">
                             <div class="inner-content">
                                 <h4>
-                                    Dior
+                                    ABC MALL
                                 </h4>
                                 <span>
-                                    Its Dior Brand Largets Retails in Country
+                                    Discover unparalleled shopping and entertainment at <br /> ABC Shopping Mall, your ultimate retail destination
                                 </span>
-                                <div class="main-border-button">
-                                    <a href="#">Purchase Now!</a>
-                                </div>
+                                @*<div class="main-border-button">
+                                    @Html.ActionLink("Book Tickets", "Create", "UserTicket")
+                                </div>*@
                             </div>
 
-                            <img src="~/Hexashop/assets/images/baner-right-image-02.jpg">
+                            <img src="~/Hexashop/assets/images/mall.jpg" height="730px">
 
 
 
@@ -115,19 +117,19 @@
                                 <div class="right-first-image">
                                     <div class="thumb">
                                         <div class="inner-content">
-                                            <h4>Women</h4>
-                                            <span>Best Clothes For Women</span>
+                                            <h4>Food Courts</h4>
+                                            <span>Best Food Courts</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>Women</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <h4>Food Court</h4>
+                                                <p>Savor a world of flavors at our diverse and delectable food court.</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                    @Html.ActionLink("Discover More", "Index", "FoodA")
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="~/Hexashop/assets/images/baner-right-image-01.jpg">
+                                        <img src="~/Hexashop/assets/images/foodcourttop.jpg" height="350px">
                                     </div>
                                 </div>
                             </div>
@@ -136,18 +138,18 @@
                                     <div class="thumb">
                                         <div class="inner-content">
                                             <h4>Men</h4>
-                                            <span>Best Clothes For Men</span>
+                                            <span>Best Cinema hall</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>Men</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <h4>Cinema</h4>
+                                                <p>Experience the magic of cinema at our state-of-the-art theaters, where entertainment comes to life.</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                    @Html.ActionLink("Discover More", "Index", "UserMovies")
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="~/Hexashop/assets/images/baner-right-image-02.jpg">
+                                        <img src="~/Hexashop/assets/images/cinematop.jpg" height="350px">
                                     </div>
                                 </div>
                             </div>
@@ -155,19 +157,19 @@
                                 <div class="right-first-image" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
                                     <div class="thumb">
                                         <div class="inner-content">
-                                            <h4>Kids</h4>
-                                            <span>Best Clothes For Kids</span>
+                                            <h4>Mens</h4>
+                                            <span>Best Clothes For mens</span>
                                         </div>
                                         <div class="hover-content">
                                             <div class="inner">
-                                                <h4>Kids</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <h4>Mens</h4>
+                                                <p>Discover the perfect blend of style and comfort with our premium men's clothing collection.</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                    @Html.ActionLink("Discover More", "Index", "ShoopingProduct")
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="~/Hexashop/assets/images/baner-right-image-03.jpg">
+                                        <img src="~/Hexashop/assets/images/men.jpg" height="350px">
                                     </div>
                                 </div>
                             </div>
@@ -181,13 +183,13 @@
                                         <div class="hover-content">
                                             <div class="inner">
                                                 <h4>Accessories</h4>
-                                                <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                <p>Complete your look with our stylish and unique accessories collection, perfect for any occasion.</p>
                                                 <div class="main-border-button">
-                                                    <a href="#">Discover More</a>
+                                                    @Html.ActionLink("Discover More", "Index", "ShoopingProduct")
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="~/Hexashop/assets/images/baner-right-image-04.jpg">
+                                        <img src="~/Hexashop/assets/images/acess.jpg" height="350px">
                                     </div>
                                 </div>
                             </div>
@@ -198,8 +200,8 @@
         </div>
     </div>
     <!-- ***** Main Banner Area End ***** -->
-    <!-- ***** Men Area Starts ***** -->
-    <section class="section" id="men">
+    <!-- ***** shop Area Starts ***** -->
+    <section class="section" id="men" data-aos="zoom-in-up" data-aos-duration="1000">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -226,18 +228,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/s1.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/next.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Next Shop</h4>
                                 </div>
                             </div>
                             <div class="item">
@@ -251,18 +245,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/puma.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/adidas2.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Air Force 1 X</h4>
-                                    <span>$90.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Adidas Shop</h4>
                                 </div>
                             </div>
                             <div class="item">
@@ -276,18 +262,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/adidas.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/jjs.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Love Nana ‘20</h4>
-                                    <span>$150.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Junaid Jamshaid Shop</h4>
                                 </div>
                             </div>
                             <div class="item">
@@ -301,18 +279,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/men-01.jpg" alt="">
+                                    <img src="~/Hexashop/assets/images/levis.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Levi's Shop</h4>
                                 </div>
                             </div>
                         </div>
@@ -323,7 +293,7 @@
     </section>
     <!-- ***** Men Area Ends ***** -->
     <!-- ***** Women Area Starts ***** -->
-    <section class="section" id="women">
+    <section class="section" id="women" data-aos="zoom-in-up" data-aos-duration="1000">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -350,18 +320,11 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/kfc.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/kfc2.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>New Green Jacket</h4>
+                                    <h4>KFC Shop</h4>
                                     <span>$75.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
                                 </div>
                             </div>
                             <div class="item">
@@ -374,18 +337,10 @@
                                                 </a>
                                             </li>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/subway2.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/sub2.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Dress</h4>
-                                    <span>$45.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Subway Shop</h4>
                                 </div>
                             </div>
                             <div class="item">
@@ -399,18 +354,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/mcd.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/mc.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Spring Collection</h4>
-                                    <span>$130.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Mcdonald Shop</h4>
                                 </div>
                             </div>
                             <div class="item">
@@ -428,15 +375,7 @@
 
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Starbucks Coffee</h4>
                                 </div>
                             </div>
                         </div>
@@ -447,7 +386,7 @@
     </section>
     <!-- ***** Women Area Ends ***** -->
     <!-- ***** Kids Area Starts ***** -->
-    <section class="section" id="kids">
+     <section class="section" id="kids" data-aos="zoom-in-up" data-aos-duration="1000">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -474,18 +413,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/QhuHve.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/joker2.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>School Collection</h4>
-                                    <span>$80.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Joker</h4>
                                 </div>
                             </div>
                             <div class="item">
@@ -499,18 +430,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/dora.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/evil.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Summer Cap</h4>
-                                    <span>$12.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Evil Dead</h4>
                                 </div>
                             </div>
                             <div class="item">
@@ -524,18 +447,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/lostcity.jpg" height="400px" width="400px" alt="">
+                                    <img src="~/Hexashop/assets/images/conjuring.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Kid</h4>
-                                    <span>$30.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Conjuring</h4>
                                 </div>
                             </div>
                             <div class="item">
@@ -549,18 +464,10 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <img src="~/Hexashop/assets/images/kid-01.jpg" alt="">
+                                    <img src="~/Hexashop/assets/images/shaitan2.jpg" height="400px" width="400px" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>Classic Spring</h4>
-                                    <span>$120.00</span>
-                                    <ul class="stars">
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                        <li><i class="fa fa-star"></i></li>
-                                    </ul>
+                                    <h4>Shaitan</h4>
                                 </div>
                             </div>
                         </div>
@@ -571,24 +478,24 @@
     </section>
     <!-- ***** Kids Area Ends ***** -->
     <!-- ***** Explore Area Starts ***** -->
-    <section class="section" id="explore">
+    <section class="section" id="explore" data-aos="zoom-out" data-aos-duration="1000">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="left-content">
-                        <h2>Discover Our Shops</h2>
-                        <span>Welcome to our diverse range of shops, offering everything from the latest fashion to unique gifts. Feel free to explore and find what you love.</span>
+                        <h2  data-aos="fade-up" data-aos-duration="1000">Discover Our Shops</h2>
+                        <span  data-aos="fade-up" data-aos-duration="1000">Welcome to our diverse range of shops, offering everything from the latest fashion to unique gifts. Feel free to explore and find what you love.</span>
                         <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>Your ultimate shopping destination for quality and variety.</p>
+                            <i class="fa fa-quote-left"></i><p  data-aos="fade-up" data-aos-duration="1000">Your ultimate shopping destination for quality and variety.</p>
                         </div>
-                        <p>We have a carefully curated selection of stores to meet all your shopping needs. From high-end brands to local artisans, our shops provide an exceptional shopping experience.</p>
-                        <p>If you enjoy our shopping center, please share your experience with friends and family. Your support helps us continue to bring you the best in retail and entertainment.</p>
-                        <div class="main-border-button">
+                        <p  data-aos="fade-up" data-aos-duration="1000">We have a carefully curated selection of stores to meet all your shopping needs. From high-end brands to local artisans, our shops provide an exceptional shopping experience.</p>
+                        <p  data-aos="fade-up" data-aos-duration="1000">If you enjoy our shopping center, please share your experience with friends and family. Your support helps us continue to bring you the best in retail and entertainment.</p>
+                        <div class="main-border-button" data-aos="fade-up" data-aos-duration="1000">
                             <p> @Html.ActionLink("Discover More", "Index", "ShoopingProduct") </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6"   data-aos="zoom-in" data-aos-duration="1000">
                     <div class="right-content">
                         <div class="row">
                             <div class="col-lg-6">
@@ -599,12 +506,12 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="first-image">
-                                    <img src="~/Hexashop/assets/images/explore-image-01.jpg" alt="">
+                                    <img src="~/Hexashop/assets/images/bags.jpg" alt="" height="255px" width="100%">
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="second-image">
-                                    <img src="~/Hexashop/assets/images/explore-image-02.jpg" alt="">
+                                    <img src="~/Hexashop/assets/images/woman_bag.jpg" height="255px" width="100%" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -621,11 +528,11 @@
     </section>
     <!-- ***** Explore Area Ends ***** -->
     <!-- ***** Social Area Starts ***** -->
-    <section class="section" id="social">
+    <section class="section" id="social" data-aos="zoom-in" data-aos-duration="1000">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-heading">
+                    <div class="section-heading" data-aos="zoom-out" data-aos-duration="1000">
                         <h2>Social Media</h2>
                         <span>Social media: Connect, share, and engage with a global community instantly.</span>
                     </div>
@@ -641,7 +548,7 @@
                                 <h6>Fashion</h6>
                             </a>
                         </div>
-                        <img src="~/Hexashop/assets/images/instagram-01.jpg" alt="">
+                        <img src="~/Hexashop/assets/images/g1.jpg" height="185px" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -661,7 +568,7 @@
                                 <h6>Brand</h6>
                             </a>
                         </div>
-                        <img src="~/Hexashop/assets/images/instagram-03.jpg" alt="">
+                        <img src="~/Hexashop/assets/images/g2.jpg" height="185px" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -681,7 +588,7 @@
                                 <h6>Leather</h6>
                             </a>
                         </div>
-                        <img src="~/Hexashop/assets/images/instagram-05.jpg" alt="">
+                        <img src="~/Hexashop/assets/images/g3.jpg" height="185px" alt="">
                     </div>
                 </div>
                 <div class="col-2">
@@ -741,10 +648,10 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3" data-aos="slide-right" data-aos-duration="1000">
+                <div class="col-lg-3" data-aos="slide-down" data-aos-duration="1000">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="80" style="border-radius:50%;color:white;" alt="hexashop ecommerce templatemo">
+                            <img src="~/Hexashop/assets/images/logo3.png" height="80px" width="80px" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">Aptech Clifton,Karachi,Pakistan</a></li>
@@ -753,9 +660,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-9 d-flex align-items-center justify-content-end" data-aos="slide-left" data-aos-duration="1000">
+                <div class="col-lg-9 d-flex align-items-center justify-content-end" data-aos="slide-down" data-aos-duration="1000">
                     <div class="text-center">
-                        <h3 class="text-light fw-light pb-3">Shopping &amp; Categories</h3>
+                        <h4 class="text-light fw-light pb-3">Shopping &amp; Categories</h4>
                         <ul>
                             <li> @Html.ActionLink("Shops", "Index", "ShoopingProduct") </li>
                             <li> @Html.ActionLink("Food Courts", "Index", "FoodA") </li>

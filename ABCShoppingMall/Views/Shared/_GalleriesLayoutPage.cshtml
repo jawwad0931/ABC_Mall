@@ -31,6 +31,8 @@
     https://templatemo.com/tm-571-hexashop
 
     -->
+    @* Animation *@
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <!-- ***** Preloader Start ***** -->
@@ -47,10 +49,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="main-nav" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
+                    <nav class="main-nav" data-aos="slide-down" data-aos-duration="1000">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="120px">
+                        <a href="index.html" class="logo" style="color: #404040 !important;">
+                            @*<img src="~/Hexashop/assets/images/j.png" height="80px" width="120px">*@
+                            ABC Mall
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -82,13 +85,13 @@
     </header>
     <!-- ***** Header Area End ***** -->
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="page-heading about-page-heading" id="top">
+    <div class="page-heading about-page-heading" id="top" style="background-image:url(../../Hexashop/assets/images/mall2.jpg)">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>Gallery</h2>
-                        <span>Step into a realm of artistic brilliance and imagination at our esteemed art gallery</span>
+                        <h2 data-aos="slide-up" data-aos-duration="1000">Gallery</h2>
+                        <span data-aos="slide-up" data-aos-duration="1000">Step into a realm of artistic brilliance and imagination at our esteemed art gallery</span>
                     </div>
                 </div>
             </div>
@@ -99,24 +102,24 @@
     <div class="about-us">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="fade-in" data-aos-duration="1000">
                     <div class="left-image">
-                        <img src="~/Hexashop/assets/images/about-left-image.jpg" alt="">
+                        <img src="~/Hexashop/assets/images/arti.jpg" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="right-content">
-                        <h4>Welcome to Our Art Gallery</h4>
-                        <span>Explore a world of creativity and inspiration through our curated collection of artworks.</span>
+                        <h4 data-aos="zoom-in" data-aos-duration="1000">Welcome to Our Art Gallery</h4>
+                        <span data-aos="zoom-in" data-aos-duration="1000">Explore a world of creativity and inspiration through our curated collection of artworks.</span>
                         <div class="quote">
-                            <i class="fa fa-quote-left"></i><p>Immerse yourself in the beauty of artistic expression and discover new perspectives.</p>
+                            <i class="fa fa-quote-left"></i><p data-aos="zoom-in" data-aos-duration="1000">Immerse yourself in the beauty of artistic expression and discover new perspectives.</p>
                         </div>
-                        <p>At our gallery, we aim to showcase diverse talents and ignite a passion for art in every visitor. Whether you're a seasoned art enthusiast or a curious newcomer, there's something here for everyone to appreciate.</p>
-                        <ul class="social-links">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
+                        <p data-aos="zoom-in" data-aos-duration="1000">At our gallery, we aim to showcase diverse talents and ignite a passion for art in every visitor. Whether you're a seasoned art enthusiast or a curious newcomer, there's something here for everyone to appreciate.</p>
+                        @*<ul class="social-links">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>*@
                     </div>
                 </div>
             </div>
@@ -130,17 +133,17 @@
     <!-- ***** Subscribe Area Ends ***** -->
 
 
-    <div>
+    <div data-aos="zoom-out" data-aos-duration="1000">
         @RenderBody()
     </div>
 
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3" data-aos="slide-right" data-aos-duration="1000">
+                <div class="col-lg-3" data-aos="slide-down" data-aos-duration="1000">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="80" style="border-radius:50%;" alt="hexashop ecommerce templatemo">
+                            <img src="~/Hexashop/assets/images/logo3.png" height="80px" width="80px" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">Aptech Clifton,Karachi,Pakistan</a></li>
@@ -149,9 +152,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-9 d-flex align-items-center justify-content-end" data-aos="slide-left" data-aos-duration="1000">
+                <div class="col-lg-9 d-flex align-items-center justify-content-end" data-aos="slide-down" data-aos-duration="1000">
                     <div class="text-center">
-                        <h3 class="text-light fw-light pb-3">Shopping &amp; Categories</h3>
+                        <h4 class="text-light fw-light pb-3">Shopping &amp; Categories</h4>
                         <ul>
                             <li> @Html.ActionLink("Shops", "Index", "ShoopingProduct") </li>
                             <li> @Html.ActionLink("Food Courts", "Index", "FoodA") </li>
@@ -203,6 +206,10 @@
             });
         });
 
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
 </body>

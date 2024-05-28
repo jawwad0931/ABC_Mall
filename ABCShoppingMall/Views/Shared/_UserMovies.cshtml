@@ -30,6 +30,8 @@
     https://templatemo.com/tm-571-hexashop
 
     -->
+    @* Animation *@
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -49,10 +51,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <nav class="main-nav" data-aos="slide-down" data-aos-duration="1000" data-aos-delay="50">
+                    <nav class="main-nav" data-aos="slide-down" data-aos-duration="1000">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="120px">
+                        <a href="index.html" class="logo" style="color: #404040 !important;">
+                            @*<img src="~/Hexashop/assets/images/j.png" height="80px" width="120px">*@
+                            ABC Mall
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -85,13 +88,13 @@
     <!-- ***** Header Area End ***** -->
     <!-- ***** Header Area End ***** -->
     <!-- ***** Main Banner Area Start ***** -->
-    <div class="page-heading" id="top">
+    <div class="page-heading" id="top" style="background-image:url(../../Hexashop/assets/images/cinema2.jpg);>
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="inner-content">
-                        <h2>Cinema Movies</h2>
-                        <span>Experience cinematic magic with our latest blockbuster movies.</span>
+                        <h2 data-aos="slide-up" data-aos-duration="1000">Cinema Movies</h2>
+                        <span data-aos="slide-up" data-aos-duration="1000">Experience cinematic magic with our latest blockbuster movies.</span>
                     </div>
                 </div>
             </div>
@@ -101,7 +104,7 @@
     <!-- ***** Products Area Starts ***** -->
     <!-- ***** Products Area Ends ***** -->
 
-    <div>
+    <div data-aos="zoom-out" data-aos-duration="1000">
         @RenderBody()
     </div>
 
@@ -109,10 +112,10 @@
     <footer>
         <div class="container">
             <div class="row">
-                <div class="col-lg-3" data-aos="slide-right" data-aos-duration="1000">
+                <div class="col-lg-3" data-aos="slide-down" data-aos-duration="1000">
                     <div class="first-item">
                         <div class="logo">
-                            <img src="~/Hexashop/assets/images/j.png" height="80px" width="80" style="border-radius:50%;" alt="hexashop ecommerce templatemo">
+                            <img src="~/Hexashop/assets/images/logo3.png" height="80px" width="80px" alt="hexashop ecommerce templatemo">
                         </div>
                         <ul>
                             <li><a href="#">Aptech Clifton,Karachi,Pakistan</a></li>
@@ -121,9 +124,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-9 d-flex align-items-center justify-content-end" data-aos="slide-left" data-aos-duration="1000">
+                <div class="col-lg-9 d-flex align-items-center justify-content-end" data-aos="slide-down" data-aos-duration="1000">
                     <div class="text-center">
-                        <h3 class="text-light fw-light pb-3">Shopping &amp; Categories</h3>
+                        <h4 class="text-light fw-light pb-3">Shopping &amp; Categories</h4>
                         <ul>
                             <li> @Html.ActionLink("Shops", "Index", "ShoopingProduct") </li>
                             <li> @Html.ActionLink("Food Courts", "Index", "FoodA") </li>
@@ -176,7 +179,11 @@
         });
 
     </script>
-
+    @*animation script*@
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

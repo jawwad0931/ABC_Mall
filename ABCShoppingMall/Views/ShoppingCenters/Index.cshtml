@@ -7,9 +7,6 @@
 
 <h2>Index</h2>
 <div class="container" style="margin-left:280px">
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
     <table class="table">
         <tr>
             <th>
@@ -21,6 +18,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Image)
             </th>
+            <th>Actions</th>
             <th></th>
         </tr>
 
@@ -34,16 +32,15 @@
                     @Html.DisplayFor(modelItem => item.Shop_Detail)
                 </td>
                 <td>
-                 
-                    <img src="@Url.Content(item.Image)" width="50" height="50" class="img-rounded" />
+
+                    <img src="@Url.Content(item.Image)" width="50" height="50" style="border-radius:50%;" />
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
                     @Html.ActionLink("Delete", "Delete", new { id = item.Id })
                 </td>
             </tr>
         }
 
     </table>
-    </div>
+</div>

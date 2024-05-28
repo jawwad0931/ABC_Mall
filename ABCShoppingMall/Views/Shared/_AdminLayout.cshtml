@@ -36,6 +36,10 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <script src="~/AdminTmp/js/custom.js"></script>
     <link href="~/AdminTmp/css/custom.css" rel="stylesheet">
     <!--//Metis Menu -->
+    @* Font family *@
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <style>
         #chartdiv {
             width: 100%;
@@ -86,15 +90,15 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <link href="~/AdminTmp/css/owl.carousel.css" rel="stylesheet">
     <script src="~/AdminTmp/js/owl.carousel.js"></script>
     <script>
-							$(document).ready(function() {
-								$("#owl-demo").owlCarousel({
-									items : 3,
-									lazyLoad : true,
-									autoPlay : true,
-									pagination : true,
-									nav:true,
-								});
-							});
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                items: 3,
+                lazyLoad: true,
+                autoPlay: true,
+                pagination: true,
+                nav: true,
+            });
+        });
     </script>
     <!-- //requried-jsfiles-for owl -->
 </head>
@@ -102,14 +106,14 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
     <div class="main-content">
         <div class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
             <!--left-fixed -navigation-->
-            <aside class="sidebar-left">
+            <aside class="sidebar-left" style="background-color: #21130d !important; ">
                 <nav class="navbar navbar-inverse">
                     <div class="navbar-header">
                     </div>
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="sidebar-menu">
-                            <li class="treeview" style="padding:20px;text-decoration:underline;">
-                                <h4>@Html.ActionLink("Admin Panel", "Index", "AdminDashboard")</h4>
+                            <li class="treeview" style="padding:20px;color:white; font-family: 'Tangerine', cursive;">
+                                <h3>@Html.ActionLink("ABC   Mall", "Index", "AdminDashboard")</h3>
                             </li>
                             <li class="treeview">
                                 <a href="#">
@@ -204,11 +208,6 @@ SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony
         @RenderBody()
     </div>
 
-    <!--footer-->
-    <div class="footer">
-        <p>&copy; 2018 Glance Design Dashboard. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">w3layouts</a></p>
-    </div>
-    <!--//footer-->
     <!-- new added graphs chart js-->
 
     <script src="~/AdminTmp/js/Chart.bundle.js"></script>
