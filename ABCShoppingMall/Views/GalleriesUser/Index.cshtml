@@ -30,12 +30,11 @@
                             
 
                         </h4>
-                        <p @item.Gallery_Detail>Lorem ipsum dolor sit amet, consecteturti adipiscing elit, sed do eiusmod temp incididunt ut labore, et dolore quis ipsum suspend.</p>
-
+                            @item.Gallery_Detail
                         <tr>
 
 
-                            <img src="@Url.Action("DisplayImage", "GalleriesUser",new{ id= @item.Id })" alt="Image" />
+                            <img src="@Url.Action("DisplayImage", "GalleriesUser",new{ id= @item.Id })" height="350px" width="auto" alt="Image" />
                             <!-- other columns -->
                         </tr>
 
