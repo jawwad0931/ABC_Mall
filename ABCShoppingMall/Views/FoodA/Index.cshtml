@@ -33,15 +33,15 @@
                             <tr>
 
 
-                                <img src="@Url.Action("DisplayImage", "FoodA",new{ id= @item.Id })" alt="Image" />
+                                <img src="@Url.Action("DisplayImage", "FoodA",new{ id= @item.Id })"
+                                     height="350px" width="300px" alt="Image" />
                                 <!-- other columns -->
                             </tr>
 
                         </div>
                         <div class="down-content">
-                            <h4 @item.FoodName></h4>
-                            <span @item.Food_Detail></span>
-                            <span @item.Items></span>
+                            <h4> @item.FoodName</h4>
+                            <span> @item.Food_Detail</span>
                         </div>
                     </div>
                 </div>

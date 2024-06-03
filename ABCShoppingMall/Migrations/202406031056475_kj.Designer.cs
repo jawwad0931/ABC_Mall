@@ -7,13 +7,13 @@ namespace ABCShoppingMall.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class ee : IMigrationMetadata
+    public sealed partial class kj : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ee));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(kj));
         
         string IMigrationMetadata.Id
         {
-            get { return "202405272037174_ee"; }
+            get { return "202406031056475_kj"; }
         }
         
         string IMigrationMetadata.Source

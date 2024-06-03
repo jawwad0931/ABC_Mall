@@ -38,15 +38,15 @@
                             <tr>
 
 
-                                <img src="@Url.Action("DisplayMoviesImage", "UserMovies",new{ id= @item.Id })" height="300px" width="300px" alt="Image" />
+                                <img src="@Url.Action("DisplayMoviesImage", "UserMovies",new{ id= @item.Id })"
+                                     height="350px" width="300px" alt="Image" />
                                 <!-- other columns -->
                             </tr>
 
                         </div>
                         <div class="down-content">
-                            <h4>@item.Name</h4>
-                            <span>@item.Multiplex</span>
-                            <span>@item.SeatsAvailable</span>
+                            <h4>Movie: @item.Name</h4>
+                            <span>Available Seats: @item.SeatsAvailable</span>
                         </div>
                     </div>
                 </div>
